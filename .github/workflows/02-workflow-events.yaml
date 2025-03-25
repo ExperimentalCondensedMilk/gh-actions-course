@@ -1,16 +1,15 @@
 name: 02 - Workflow Events
 
-on: [
-    push,
-    pull_request,
-    workflow_dispatch,
-    schedule:
-        - cron: '0 0 * * *' # Every day at midnight
-]
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * *'  # Every day at midnight
 
 jobs:
-    echo:
-        runs-on: ubuntu-latest
-        steps:
-            - name: Show the trigger
-              run: echo The job was triggered by ${{ github.event_name }} events
+  echo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Show the trigger
+        run: echo The job was triggered by ${{ github.event_name }} events
