@@ -5,6 +5,9 @@ on: push
 jobs:
     build:
         runs-on: ubuntu-latest
+        defaults:
+            run:
+                working-directory: 04-using-actions
         steps:
             - name: Checkout Code
               uses: actions/checkout@v4
@@ -14,6 +17,7 @@ jobs:
                 node-version: '18'
             - name: Install Dependencies
               run: npm ci
-              working-directory: 04-using-actions
+            - name: Run dev
+              run: npm run dev
 
 
