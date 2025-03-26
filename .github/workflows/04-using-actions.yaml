@@ -13,7 +13,7 @@ jobs:
               with:
                 node-version: '18'
             - name: Install Dependencies
-              run: npm install
-              working-directory: /04-using-actions
+              run: ls
+            #   working-directory: /04-using-actions
 
 
